@@ -1,0 +1,60 @@
+$buttonColor: rgb(143, 40, 212);
+
+.container {
+  height: 100vh;
+  max-width: 900px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  div {
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      transition: transform ease .4s;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+    span {
+      text-align: justify;
+      text-justify: inter-word;
+      width: 230px;
+      margin: 10px;
+    }
+    .bio-information{
+      display: flex;
+      flex-direction: row;
+      padding: 5px 15px;
+      background: $buttonColor;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: ease .2s;
+      strong {
+        margin: 0 2px;
+      }
+      &:hover {
+        background: darken($buttonColor, 5);
+      }
+    }
+  }
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+}

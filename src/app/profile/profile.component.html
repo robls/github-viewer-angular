@@ -1,0 +1,22 @@
+<div class="container" *ngIf="!loading else loadingDiv">
+  <div class="bio-container">
+    <div>
+      <img src="{{ user$.avatar_url }}" alt="User Avatar">
+      <div class="bio-information">
+        <strong>{{ user$.followers }}</strong> seguidores,
+        seguindo <strong>{{ user$.following }}</strong>e
+        <strong>{{ user$.public_repos }} </strong>repos
+      </div>
+      <span>{{ user$.bio }}</span>
+      <span> <strong>Nome: </strong> {{ user$.name }}</span>
+      <p><strong>Localidade:</strong> {{ user$.location }}</p>
+    </div>
+  </div>
+  <div class="info-container">
+    <h3>Repositórios</h3>
+    <app-repositories></app-repositories>
+  </div>
+</div>
+<ng-template #loadingDiv>
+  <h2>Carregando user</h2>
+</ng-template>

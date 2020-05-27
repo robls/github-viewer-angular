@@ -1,0 +1,11 @@
+<div class="container">
+  <ul *ngFor="let repo of repositories">
+    <li>
+      <div>
+        <span>{{ repo.name }}</span>
+        <p *ngIf="repo.description">{{ repo.description }}</p>
+      </div>
+      <a href="{{ repo.html_url }}">GitHub</a>
+    </li>
+  </ul>
+</div>

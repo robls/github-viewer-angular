@@ -1,0 +1,19 @@
+$headerColor: rgb(104, 232, 255);
+
+header {
+  background: $headerColor;
+  height: 50px;
+  color: #fff;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    &:hover {
+      background: darken( $headerColor, 40);
+    }
+  }
+}
